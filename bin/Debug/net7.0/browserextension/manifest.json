@@ -1,0 +1,42 @@
+﻿{
+  "manifest_version": 3,
+  "name": "Youtube Subscription Date Extension",
+  "description": "Displays when you last subscription to the youtube channel.",
+  "version": "0.3",
+  "background": {
+    "service_worker": "BackgroundWorker.js",
+    "type": "module"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "framework/*",
+        "content/*"
+      ],
+      "matches": [ "<all_urls>" ]
+    }
+  ],
+  "content_scripts": [
+    {
+      "css": ["styles.css"],
+      "js": ["content.js"],
+      "matches": ["https://www.youtube.com/*"]
+    }
+  ],
+  "host_permissions": [
+    "https://content.googleapis.com/*"
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgVPA3BMYVDC89VBCJvP6JTfkpwRfVNH6pV+FC0IpgAyhDKGr3sjrQKKW3/Xw0Gyrv7NhZxH+DapC1ScMf0xJXG3Yh4cok/JSv2Zs13bODOHjZluMhkJTMlu160pNv5+KOQZmOSlFKbMtQxXZTQ//ivwX/3c1acuajwbyaYSB1t15Lkcyk+SWcFkKUvl/5tVnAJ1jIu+WMf3MNcQAgNEDpQPS2YPEMJIR/a1P6/RovCvKlFTTF4cefw5fTKcDmMiKcvfAa+Df8lL0hyuqJWm6zr8TDEXBF0ob636zVCR74Z7wqfDWS31fPKZ92LG1hGV7+CpQ9hqnwBQEv+ObcRl8cwIDAQAB",
+  "oauth2": {
+    "client_id": "830903657761-du2avcsbu0ra24ck4mhqd2njpdllvlpn.apps.googleusercontent.com",
+    "scopes":["https://www.googleapis.com/auth/youtube.readonly"]
+  },
+  "permissions": ["identity"]
+}

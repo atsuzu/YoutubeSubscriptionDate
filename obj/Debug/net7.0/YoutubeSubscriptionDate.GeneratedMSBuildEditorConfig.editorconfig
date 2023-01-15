@@ -1,0 +1,41 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = YoutubeSubscriptionDate
+build_property.RootNamespace = YoutubeSubscriptionDate
+build_property.ProjectDir = C:\Users\Hiro\Documents\BrowserExtension\YoutubeSubscriptionDate\YoutubeSubscriptionDate\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Hiro\Documents\BrowserExtension\YoutubeSubscriptionDate\YoutubeSubscriptionDate
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Hiro/Documents/BrowserExtension/YoutubeSubscriptionDate/YoutubeSubscriptionDate/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hiro/Documents/BrowserExtension/YoutubeSubscriptionDate/YoutubeSubscriptionDate/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hiro/Documents/BrowserExtension/YoutubeSubscriptionDate/YoutubeSubscriptionDate/Pages/Options.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3B0aW9ucy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hiro/Documents/BrowserExtension/YoutubeSubscriptionDate/YoutubeSubscriptionDate/Pages/Popup.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9wdXAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hiro/Documents/BrowserExtension/YoutubeSubscriptionDate/YoutubeSubscriptionDate/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hiro/Documents/BrowserExtension/YoutubeSubscriptionDate/YoutubeSubscriptionDate/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-8np1rrj7u0
