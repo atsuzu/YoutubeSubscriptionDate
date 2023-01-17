@@ -7,13 +7,10 @@ chrome.runtime.onMessage.addListener(
       [cmd, arg] = msg;
 
       if (cmd == "GetSubscriptionDate") {
-        GetSubscriptionDateV2(arg, onSuccess);
+        GetSubscriptionDate(arg, onSuccess);
       }
       else if(cmd == "GetChannelID") {
         GetChannelID(arg, onSuccess);
-      }
-      else if(cmd == "TestGoogleOAuth") {
-        GetChannelIDV2(arg, onSuccess)
       }
       return true;  // Will respond asynchronously.
   }
@@ -29,10 +26,8 @@ function GetChannelID(url, onSuccess) {
   .then(responseText => onSuccess(responseText))
 }
 
-function GetSubscriptionDateV2(url, onSuccess) {
-  console.log("Testing TestGoogleOAuth");
+function GetSubscriptionDate(url, onSuccess) {
   chrome.identity.getAuthToken({interactive: true}, function(token) {
-    console.log(token);
     fetch(url, {
       headers: {
           'referer': 'https://www.youtube.com/',

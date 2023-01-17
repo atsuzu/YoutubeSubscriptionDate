@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Youtube Subscription Date Extension",
   "description": "Displays when you last subscription to the youtube channel.",
-  "version": "0.3",
+  "version": "0.4",
   "background": {
     "service_worker": "BackgroundWorker.js",
     "type": "module"

@@ -32,7 +32,6 @@ function GetChannelID(url, onSuccess) {
 function GetSubscriptionDateV2(url, onSuccess) {
   console.log("Testing TestGoogleOAuth");
   chrome.identity.getAuthToken({interactive: true}, function(token) {
-    console.log(token);
     fetch(url, {
       headers: {
           'referer': 'https://www.youtube.com/',

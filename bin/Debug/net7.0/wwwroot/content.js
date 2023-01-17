@@ -19,7 +19,10 @@ function IsYoutubeVideoPage() {
 }
 
 function RetrieveSubscriptionDate() {
-    if (!IsYoutubeVideoPage()) return;
+    if (!IsYoutubeVideoPage()) {
+        console.log("Not a watch video page.");
+        return;
+    }
 
     GetChannelId();
 }
@@ -42,9 +45,7 @@ function SetSubscriptionText(datetime) {
     let subscriptionParentClass = document.body;
 
     let observer = new MutationObserver(function(mutations){
-
         let subscriptionButton = document.getElementById("notification-preference-button");
-
         if(subscriptionButton) {
             let subscriptionText = subscriptionButton.getElementsByClassName("yt-core-attributed-string yt-core-attributed-string--white-space-no-wrap")[0];
 
@@ -73,5 +74,6 @@ new MutationObserver(() => {
 }).observe(document, {subtree: true, childList: true});
 
 function onUrlChange() {
-  RetrieveSubscriptionDate();
+    console.log("Url has been updated.");
+    RetrieveSubscriptionDate();
 }
