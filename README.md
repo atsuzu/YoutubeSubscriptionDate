@@ -24,10 +24,10 @@ package), but the actual feature logic lives in plain JavaScript:
 dotnet publish -c Release
 ```
 
-The loadable extension is written to:
+The loadable, assembled extension is written to:
 
 ```
-bin/Release/net10.0/publish/wwwroot/
+bin/Release/net10.0/publish/browserextension/
 ```
 
 ## Run / test locally (load unpacked)
@@ -35,7 +35,7 @@ bin/Release/net10.0/publish/wwwroot/
 1. Build with the command above.
 2. Open `chrome://extensions`.
 3. Toggle **Developer mode** on (top right).
-4. Click **Load unpacked** and select the published `wwwroot/` folder above.
+4. Click **Load unpacked** and select the published `browserextension/` folder above.
 5. Open a YouTube video for a channel you're subscribed to. The button should read
    "Subscribed since …". The first run triggers a Google sign-in consent popup
    (`chrome.identity`).
@@ -51,10 +51,10 @@ worker console (the **service worker** link on the extension card) for backgroun
 1. **Bump the version** in `wwwroot/manifest.json` (`"version"`). The Web Store rejects
    re-uploads that don't increase the version.
 2. **Build**: `dotnet publish -c Release`.
-3. **Zip the published output**. Zip the *contents* of `bin/Release/net10.0/publish/wwwroot/`
+3. **Zip the published output**. Zip the *contents* of `bin/Release/net10.0/publish/browserextension/`
    (so `manifest.json` sits at the root of the zip), e.g. from that folder:
    ```bash
-   cd bin/Release/net10.0/publish/wwwroot
+   cd bin/Release/net10.0/publish/browserextension
    zip -r ../youtube-subscription-date.zip .
    ```
 4. Go to the [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole)

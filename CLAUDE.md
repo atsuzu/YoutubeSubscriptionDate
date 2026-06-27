@@ -9,7 +9,7 @@ A Chrome/Edge browser extension (Manifest V3) that rewrites YouTube's "Subscribe
 ## Build & run
 
 - `dotnet build` — compile.
-- `dotnet publish -c Release` — produces the loadable extension. Load the published `wwwroot/` as an **unpacked extension** in `chrome://extensions` (Developer Mode → Load unpacked). The extension cannot be exercised via plain `dotnet run`; it must run inside the browser against youtube.com.
+- `dotnet publish -c Release` — produces the loadable extension at `bin/Release/net10.0/publish/browserextension/` (the `Blazor.BrowserExtension` build assembles this folder; note it's `browserextension/`, not `wwwroot/`, as of package v5). Load that folder as an **unpacked extension** in `chrome://extensions` (Developer Mode → Load unpacked). The extension cannot be exercised via plain `dotnet run`; it must run inside the browser against youtube.com.
 - Target framework is `net10.0` (`Blazor.BrowserExtension` 5.x). No test project exists.
 
 When iterating on the JS in `wwwroot/`, rebuild/publish and hit "Reload" on the extension card, then reload a YouTube watch page.
