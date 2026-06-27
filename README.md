@@ -15,7 +15,7 @@ package), but the actual feature logic lives in plain JavaScript:
 
 ## Prerequisites
 
-- [.NET 7 SDK](https://dotnet.microsoft.com/download/dotnet/7.0) (`dotnet --version`)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) (`dotnet --version`)
 - Chrome or any Chromium browser (Edge, Brave, …)
 
 ## Build
@@ -27,7 +27,7 @@ dotnet publish -c Release
 The loadable extension is written to:
 
 ```
-bin/Release/net7.0/publish/wwwroot/
+bin/Release/net10.0/publish/wwwroot/
 ```
 
 ## Run / test locally (load unpacked)
@@ -51,10 +51,10 @@ worker console (the **service worker** link on the extension card) for backgroun
 1. **Bump the version** in `wwwroot/manifest.json` (`"version"`). The Web Store rejects
    re-uploads that don't increase the version.
 2. **Build**: `dotnet publish -c Release`.
-3. **Zip the published output**. Zip the *contents* of `bin/Release/net7.0/publish/wwwroot/`
+3. **Zip the published output**. Zip the *contents* of `bin/Release/net10.0/publish/wwwroot/`
    (so `manifest.json` sits at the root of the zip), e.g. from that folder:
    ```bash
-   cd bin/Release/net7.0/publish/wwwroot
+   cd bin/Release/net10.0/publish/wwwroot
    zip -r ../youtube-subscription-date.zip .
    ```
 4. Go to the [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole)
